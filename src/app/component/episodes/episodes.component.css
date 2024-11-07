@@ -1,0 +1,135 @@
+.cont-gen-episodes{
+    width: 100%;
+    min-height: 100vh;
+    font-family: Oswald;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.471), rgba(1, 1, 1, 0.208)), url(../../../../public/scary-rick.gif);
+}
+
+.cont-episodes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-general{
+    backdrop-filter: blur(15.3px);
+    display: flex;
+    justify-content: center;
+}
+
+.cont-bc{
+    background-color: rgba(0, 0, 0, 0.89);
+    width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.cont-blur{
+    width: 90%;
+    border-radius: 15px;
+}
+
+.cont-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-texto{
+    margin: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.contexto{
+    padding: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.cont-video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 30px 30px;
+}
+
+h1{
+    font-size: 45px;
+    color: rgb(52, 7, 141);
+    -webkit-text-stroke: 1px #b3ff00;
+}
+h2{
+    font-size: 45px;
+    color: rgb(52, 7, 141);
+    -webkit-text-stroke: 1px #b3ff00;
+}
+h3{
+    font-size: 30px;
+    color: rgb(52, 7, 141);
+    -webkit-text-stroke: 1px #b3ff00;
+}
+h4{
+    font-size: 25px;
+}
+.adult{
+    font-weight: lighter;
+    border-bottom: 1px solid white;
+    margin: 25px;
+}
+.video{
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(255, 255, 255, 0.2);
+}
+
+
+.imagen-list{
+    width: 375px;
+    border-radius: 15px;
+}
+
+.cont-lista-eps{
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.cont-w-p{
+    display: flex;
+    flex-direction: column;
+}
+
+.ep{
+    padding-bottom: 155px;
+    display: flex;
+    justify-content: center;
+}
+.cont-w-p{
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+}
+
+.cont-parr{
+    display: flex;
+    align-items: end;
+    height: 360px;
+}
+.parrafo{
+    font-size: 20px;
+    
+}

@@ -1,0 +1,110 @@
+<app-nav-bar />
+
+<div class="cont-detail">
+    <div class="cont-ch-detail">
+        <div class="cont-flex">
+            <div class="cont-ch-list">
+                <a routerLink="/home">
+                    <span class="span-atras">
+                        <img src="flecha-atras.png" alt="atras">
+                    </span>
+                </a>
+                @if (!character) {
+                    <div class="cont-loader">
+                        <span class="loader"></span>
+                    </div>
+                }
+                @if(character){
+                <div class="character">
+                    <div class="cont-img">
+                        <img class="img-ch" src={{character.image}} alt="img-character">
+                        <h1 class="title-ch">{{character.name}}</h1>
+                    </div>
+                    <div class="cont-info-for">
+                        <p class="status">{{character.status == 'Alive' ? 'Vivo' : 'Muerto'}}</p>
+                        <p class="species">Especie: -{{character.species}}</p>
+                        <div class="cont-location">
+                            <img class="icon" width="20" height="20" src="location.png" alt="pin" />
+                            <p class="location"> visto por primera vez en: <strong class="strong"> <br> "{{character.origin.name}}"</strong></p>
+                        </div>
+                        <div class="cont-location">
+                            <img class="icon" width="20" height="20" src="location.png" alt="pin" />
+                            <p class="location"> visto por última vez en: <strong class="strong"><br>"{{character.location.name}}"</strong></p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+            
+            
+            <div class="cont-ep-lista">
+                <div class="episodes">
+                    <div class="lista-episodes">
+                        <img class="camera" (click)="toggleEpisodes()" src="video-camera.png" alt="camara de video">
+                        <p class="ep-aparece" (click)="toggleEpisodes()">Episodios en los que aparece: </p>
+                    </div>
+                    <div class="flecha-abajo" (click)="toggleEpisodes()">
+                        @if (!isEpisodesVisible) {
+                            <img class="arrow" src="down-arrow.png" alt="flecha abajo">
+                        }
+                        @if (isEpisodesVisible) {
+                            <img class="arrow" src="up-arrow.png" alt="flecha arriba">
+                        }
+                    </div>
+                </div>
+        
+                <div class="lista-url">
+                    @if (isEpisodesVisible) {
+                        <div class="url">
+                            @for(ep of episodes ; track $index){
+                            <div class="caract-ep">
+                                <h1 class="text-start">{{ep.name}}</h1>
+                                <p class="episod">{{ep.episode}}</p>
+                                <p class="episod">Fecha de emisión: {{ep.air_date | date: 'dd/MM/YY'}}</p>
+                            </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="cont-caracts">
+            <h1 class="caracteristicas">Caracteristicas generales: </h1>
+            <div class="cont-caracts-generales">
+                @if (!character) {
+                    <div class="cont-loader">
+                        <span class="loader"></span>
+                    </div>
+                }
+                @if(character){
+                <div class="character-caract">
+                    <div class="img-izq"></div>
+                    <div class="cont-img-medio">
+                        
+                    </div>
+                    <div class="cont-img-caract">
+                        <img class="img-cacract" src={{character.image}} alt="img-character">
+                        <h1 class="title-caract">{{character.name}}</h1>
+                    </div>
+                    <div class="cont-info-for-caract">
+                        <p class="status-caract"> • El personaje se encuentra {{character.status == 'Alive' ? 'Vivo' : 'Muerto'}}</p>
+                        <p class="species-caract"> • Tipo de especie: {{character.species}}</p>
+                        <p> • Genero del personaje: {{character.gender == 'Male' ? 'Hombre' : 'Mujer'}}</p>
+                        <p> • Fue creado: {{character.created | date: 'dd/MM/YYYY'}}</p>
+                        <div class="cont-location-caract">
+                            <img class="icon" width="20" height="20" src="location.png" alt="pin" />
+                            <p class="location"> visto por primera vez en: <strong class="strong"> <br> "{{character.origin.name}}"</strong></p>
+                        </div>
+                        <div class="cont-location-caract">
+                            <img class="icon" width="20" height="20" src="location.png" alt="pin" />
+                            <p class="location"> visto por última vez en: <strong class="strong"><br>"{{character.location.name}}"</strong></p>
+                        </div>
+                    </div>
+                    <div class="img-der"></div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

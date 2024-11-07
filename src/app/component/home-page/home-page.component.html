@@ -1,0 +1,31 @@
+<app-nav-bar></app-nav-bar>
+<div class="contenido-home">
+    <div class="banner">
+        <img class="image-banner" src="banner-rick-y-morty.png" alt="">
+    </div>
+</div>
+
+<div class="cont-info">
+    <div class="cont-search">
+        <input type="search" [(ngModel)]="params.name" placeholder="🔍" id="default-search" (input)="onSearch()"
+            required>
+    </div>
+    <div class="cont-for">
+        @for (ch of characters ; track $index) {
+        <div routerLink="/character-detail/{{ch.id}}" routerLinkActive="active" class="cont-info-ch">
+            <div class="cont-img">
+                <img class="img-ch" src={{ch.image}} alt="img-character">
+            </div>
+            <div class="cont-info-for">
+                <h1 class="title-ch">{{ch.name}}</h1>
+                <p class="location">visto por última vez en: <strong class="strong"> <br>
+                        "{{ch.location.name}}"</strong></p>
+                <br>
+                <p class="species">- {{ch.species}}</p>
+                <p class="status">- {{ch.status}}</p>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>

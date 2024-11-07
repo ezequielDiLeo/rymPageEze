@@ -1,0 +1,94 @@
+.contenido-home{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+.banner{
+    padding-top: 100px;
+}
+
+.cont-info{
+    background: linear-gradient(rgba(0, 0, 0, 0.604), rgba(1, 1, 1, 0.76)), url(../../../../public/gif-rym.gif);
+    padding: 50px;
+    margin: 0;
+    height: auto;
+    background-color: rgb(28, 27, 27);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Oswald;
+}
+
+.cont-search{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 30px;
+}
+
+.cont-for{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont-info-ch{
+    width: 600px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    background-color: #050505a0;
+    margin: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 242, 255, 0.211);
+    font-family: Oswald;
+    transition: all ease 0.5s;
+}
+
+.cont-info-ch:hover{
+    background-color: rgba(5, 5, 5, 0.934);
+    font-family: Oswald;
+}
+
+.cont-info-for{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.cont-img{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.img-ch{
+    height: 180px;
+    border-radius: 5px;
+}
+
+.title-ch{
+    font-size: 30px;
+    color: aqua;
+    -webkit-text-stroke: 1px #fff700;
+}
+.strong{
+    color: #6fd3d0;
+}
+
+#default-search{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 242, 255, 0.211);
+    background-color: #40209857;
+    width: 350px;
+    height: 35px;
+    font-size: 23px;
+    color: white;
+}
+#default-search::placeholder{
+    padding: 15px;
+}
+
