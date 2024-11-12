@@ -56,35 +56,3 @@ export class HomePageComponent implements OnInit {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// search(event: Event): void {
-//   const element = event.currentTarget as HTMLInputElement;
-//   this.searchTerm$.next(element.value);
-//   // this.getSearch()
-// }
-
-// getSearch() {
-//   this.searchIsTrue = true
-//   this.character$ = this.searchTerm$.pipe(
-//     filter((term: string) => term.length >= 2),
-//     debounceTime(400),
-//     distinctUntilChanged(),
-//     switchMap((term: string) => this._service.filterCharacter(term))
-//   )
-// }
