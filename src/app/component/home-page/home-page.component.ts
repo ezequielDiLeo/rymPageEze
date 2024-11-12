@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, OnInit, ViewChild } from '@angular/core';
 import { ApiServiceService } from '../../services/api-service.service';
 
 @Component({
@@ -14,12 +14,19 @@ export class HomePageComponent implements OnInit {
   //VARIABLES
   characters: any[] = []
   params = {} as any
+  isScrolled = false;
 
   constructor(private _service: ApiServiceService) {
   }
 
   ngOnInit(): void {
     this.getAllCharacters();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.isScrolled = scrollPosition > 300; 
   }
 
   onSearch() {
@@ -42,6 +49,10 @@ export class HomePageComponent implements OnInit {
       }
 
     })
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

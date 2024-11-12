@@ -12,6 +12,7 @@ import { ApiServiceService } from './services/api-service.service';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { EpisodesComponent } from './component/episodes/episodes.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EpisodesComponent } from './component/episodes/episodes.component';
     CharacterDetailComponent,
     IntroPageComponent,
     NavBarComponent,
-    EpisodesComponent
+    EpisodesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

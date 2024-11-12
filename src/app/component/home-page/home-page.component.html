@@ -26,6 +26,12 @@
             </div>
         </div>
         }
-
+        @if(isScrolled){
+            <button  class="scroll-to-top" (click)="scrollToTop()">
+                <img src="icon-arriba.png" alt="">
+            </button>
+        }
     </div>
 </div>
+
+<app-footer /> 

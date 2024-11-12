@@ -3,7 +3,7 @@
     min-height: 100vh;
     font-family: Oswald;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.471), rgba(1, 1, 1, 0.208)), url(../../../../public/scary-rick.gif);
+    background: linear-gradient(rgba(0, 0, 0, 0.751), rgba(1, 1, 1, 0.76)), url(../../../../public/a-rick-time.jpg);
 }
 
 .cont-episodes{
@@ -14,13 +14,13 @@
 }
 
 .cont-general{
-    backdrop-filter: blur(15.3px);
+    backdrop-filter: blur(2px);
     display: flex;
     justify-content: center;
 }
 
 .cont-bc{
-    background-color: rgba(0, 0, 0, 0.89);
+    background: linear-gradient(to left, rgba(1, 1, 1, 0.895), rgba(0, 0, 0, 0.955));
     width: 90%;
     padding: 30px;
     border-radius: 15px;
@@ -33,6 +33,12 @@
     border-radius: 15px;
 }
 
+.imgPortada{
+    padding-top: 65px;
+    border-radius: 15px;
+    width: 350px;
+}
+
 .cont-title{
     display: flex;
     flex-direction: column;
@@ -41,15 +47,13 @@
 }
 
 .cont-texto{
-    margin: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 100%;
     text-align: justify;
 }
 
 .contexto{
-    padding: 10px;
     padding-top: 10px;
+    padding: 25px;
     font-size: 20px;
 }
 
@@ -58,6 +62,18 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 45px;
+    padding-top: 55px;
+}
+
+.foto-fondo-p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(1, 1, 1, 0.877)), url(../../../../public/rymPortada.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .list{
@@ -65,21 +81,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 10px 30px 30px 30px;
 }
 
 h1{
     font-size: 45px;
-    color: rgb(52, 7, 141);
-    -webkit-text-stroke: 1px #b3ff00;
+    color: rgb(0, 243, 252);
+    -webkit-text-stroke: 1px #bbff00;
 }
 h2{
-    font-size: 45px;
+    padding-right: 30px;
+    font-size: 35px;
     color: rgb(52, 7, 141);
     -webkit-text-stroke: 1px #b3ff00;
 }
 h3{
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(52, 7, 141);
     -webkit-text-stroke: 1px #b3ff00;
 }
@@ -92,7 +110,7 @@ h4{
     margin: 25px;
 }
 .video{
-    width: 550px;
+    width: 750px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 5px rgba(255, 255, 255, 0.2);
 }
@@ -106,6 +124,7 @@ h4{
 .cont-lista-eps{
     border-radius: 15px;
     margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 .cont-w-p{
@@ -114,9 +133,9 @@ h4{
 }
 
 .ep{
-    padding-bottom: 155px;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .cont-w-p{
     display: flex;
@@ -126,10 +145,32 @@ h4{
 
 .cont-parr{
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 360px;
+}
+.titles{
+    display: flex;
 }
 .parrafo{
     font-size: 20px;
     
 }
+
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s;
+  }
+  
+  .scroll-to-top:hover {
+    opacity: 0.8;
+  }
