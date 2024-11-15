@@ -200,3 +200,131 @@ h4{
   .scroll-to-top:hover {
     opacity: 0.8;
   }
+
+  /* Media Queries */
+@media (max-width: 768px) {
+    .cont-gen-episodes{
+        width: auto;
+    }
+    .oyeRick {
+        font-size: 25px;
+        padding: 20px;
+    }
+    .cont-rick{
+        width: 100%;
+    }
+
+    h1, h3 {
+        font-size: 25px;
+    }
+
+    h2{
+        display: none;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .cont-w-p{
+        padding-top: 10px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    .cont-bc{
+        height: 100%;
+        width: auto;
+        padding: 30px 0 30px 0;
+        border-radius: 15px;
+        margin-bottom: 50px;
+        margin-top: -100px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .imgPortada,
+    .imagen-list {
+        width: 250px;
+    }
+
+    .cont-general {
+        padding-top: 100px;
+        width: 100%;
+    }
+
+    .contexto {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .parrafo {
+        font-size: 16px;
+    }
+    .cont-parr {
+        height: auto;
+        flex-direction: column;
+        padding-top: 15px;
+        margin-bottom: 65px;
+    }
+
+    .list {
+        padding: 10px 15px 20px 15px;
+    }
+    .ep{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .oyeRick {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    h1, h3 {
+        font-size: 20px;
+    }
+
+    h2{
+        display: none;
+    }
+
+    .video {
+        width: 100%;
+    }
+    .ep{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imgPortada,
+    .imagen-list {
+        width: 200px;
+    }
+
+    .cont-general {
+        padding-top: 70px;
+    }
+
+    .contexto {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .parrafo {
+        font-size: 14px;
+    }
+    .cont-parr {
+        height: auto;
+        flex-direction: column;
+        padding-top: 15px;
+        margin-bottom: 65px;
+    }
+
+    .list {
+        padding: 10px 15px 20px 15px;
+    }
+}

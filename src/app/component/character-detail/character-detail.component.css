@@ -300,3 +300,225 @@
     width: 33%;
     border-radius: 35px;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .cont-detail{
+        background: linear-gradient(rgba(70, 18, 159, 0.52), rgba(70, 18, 159, 0.421)), url(../../../../public/gif2rym.gif);
+        width: 100%;
+        min-height: auto;
+        font-family: Oswald;
+        color: white;
+    }
+
+    .cont-ch-detail {
+        min-height: auto;
+        box-shadow: 0 4px 30px rgba(7, 77, 216, 0.1);
+        backdrop-filter: blur(25.3px);
+        width: 100%;
+        /* min-height: 750px; */
+        justify-content: center;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont-flex {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont-location {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character {
+        margin-left: 0;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .status, .species {
+        padding-left: 0;
+    }
+
+    .cont-img {
+        flex-direction: column;
+    }
+
+    .img-ch {
+        width: 120px;
+        height: 120px;
+        margin-right: 0;
+    }
+
+    .episodes {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    .lista-url {
+        width: 100%;
+        height: auto;
+    }
+
+    .caract-ep {
+        width: 100%;
+    }
+    .cont-ep-lista {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cont-flex {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .cont-ch-list,
+    .cont-ep-lista {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .character {
+        margin: 0 auto;
+    }
+
+    .cont-location,
+    .episodes,
+    .cont-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont-caracts-generales {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .lista-episodes,
+    .caract-ep {
+        width: 100%;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (hasta 576px) */
+@media (max-width: 576px) {
+    .character,
+    .status,
+    .species,
+    .cont-location,
+    .episodes,
+    .cont-img,
+    .lista-episodes,
+    .caract-ep,
+    .cont-caracts-generales {
+        width: auto;
+        margin: 0;
+    }
+
+    .cont-caracts-generales{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+    }
+
+    .title-ch,
+    .text-start {
+        font-size: 22px;
+    }
+
+    .title-caract {
+        font-size: 18px;
+    }
+
+    .img-ch {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-izq,
+    .img-der {
+        display: none;
+    }
+
+    .span-atras {
+        background-color: #00000050;
+        border-radius: 15px;
+        margin-left: 20px;
+        padding-left: 5px;
+        width: 40px;
+        display: flex;
+        transition: all ease 0.5s;
+    }
+
+    .episodes {
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .cont-loader {
+        padding: 20px;
+    }
+
+    .cont-caracts {
+        padding-top: 30px;
+    }
+
+    .caracteristicas {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    .cont-ch-detail,
+    .cont-ep-lista {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .ep-aparece {
+        font-size: 16px;
+    }
+
+    .camera,
+    .arrow {
+        width: 30px;
+    }
+
+    .caract-ep {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .loader {
+        width: 36px;
+        height: 36px;
+    }
+
+    .character-caract {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .cont-info-for-caract {
+        padding-left: 10px;
+    }
+}
