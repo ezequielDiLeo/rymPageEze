@@ -230,6 +230,9 @@ h4{
         padding-top: 10px;
         padding-bottom: 0px;
         margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .cont-bc{
         height: 100%;
@@ -240,6 +243,17 @@ h4{
         margin-top: -100px;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .foto-fondo-p{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(1, 1, 1, 0.877)), url(../../../../public/img-cel.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .imgPortada,
