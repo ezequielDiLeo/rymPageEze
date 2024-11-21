@@ -23,11 +23,26 @@
 }
 
 .cont-search{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     width: 100%;
     margin: 30px;
 }
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input:autofill{
+    transition-property: background-color, color;
+    transition-delay: 86400s;
+    font-family: Oswald;
+    align-items: center;
+    padding: 7px;
+  }
 
 .cont-for{
     justify-content: center;
