@@ -1,7 +1,7 @@
 .cont-detail{
     background: linear-gradient(rgba(70, 18, 159, 0.52), rgba(70, 18, 159, 0.421)), url(../../../../public/gif2rym.gif);
     width: 100%;
-    min-height: auto;
+    height: auto;
     font-family: Oswald;
     color: white;
 
@@ -13,7 +13,6 @@
     width: 100%;
     min-height: 750px;
     justify-content: center;
-    /* flex-direction: column; */
     padding-top: 50px;
 }
 
@@ -24,7 +23,6 @@
     min-height: auto;
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     padding-top: 110px;
 }
 
@@ -68,6 +66,7 @@
 .title-ch{
     color: aqua;
     -webkit-text-stroke: 1px #b3ff00;
+    font-family: "Press Start 2P", system-ui;
 }
 
 .icon{
@@ -121,9 +120,25 @@
     border-radius: 15px;
 }
 
-.lista-url::-webkit-scrollbar {
-    display: none;
-  }
+    .lista-url::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .lista-url::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .lista-url::-webkit-scrollbar-thumb {
+      background-color: #00ffc3;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+      transition: background-color 0.3s ease;
+    }
+
+    .lista-url::-webkit-scrollbar-thumb:hover {
+      background-color: #0ff;
+    }
 
 .url{
     /* margin: 0 40px 40px 40px; */
@@ -227,7 +242,6 @@
 .cont-caracts{
     width: 100%;
     min-height: 750px;
-    padding-top: 150px;
 }
 
 .caracteristicas{
@@ -235,7 +249,6 @@
     color: rgb(16, 207, 207);
     -webkit-text-stroke: 1px #d0ff00;
     margin-left: 105px;
-    padding-bottom: 30px;
 }
 
 .cont-caracts-generales{
@@ -372,7 +385,7 @@
 
     .lista-episodes{
         width: 50%;
-    } 
+    }
 
     .lista-url{
         width: auto;
@@ -456,7 +469,7 @@
 
     .lista-episodes{
         width: 50%;
-    } 
+    }
 
     .caract-ep{
         margin: 20px;
@@ -509,13 +522,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
     }
     .cont-caracts{
         width: 100%;
         padding-top: 15px;
     }
-    
+
     .title-ch,
     .text-start {
         font-size: 22px;

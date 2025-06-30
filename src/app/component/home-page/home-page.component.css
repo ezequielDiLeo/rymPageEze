@@ -1,12 +1,15 @@
+
 .contenido-home{
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     background-color: #000000;
-}
-.banner{
+  }
+  .banner{
+    position: relative;
     padding-top: 100px;
+    animation: portalIn 1s ease forwards;
 }
 
 .cont-info{
@@ -20,9 +23,10 @@
     flex-wrap: wrap;
     justify-content: center;
     font-family: Oswald;
-}
+  }
 
-.cont-search{
+  .cont-search{
+  position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,25 +52,65 @@ input:autofill{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .cont-info-ch{
-    width: 600px;
-    height: 200px;
-    cursor: pointer;
-    display: flex;
-    background-color: #050505a0;
-    margin: 20px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 242, 255, 0.211);
-    font-family: Oswald;
-    transition: all ease 0.5s;
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 200px;
+  cursor: pointer;
+  display: flex;
+  background-color: #050505a0;
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 242, 255, 0.211);
+  font-family: Oswald;
+  transition: all ease 0.5s;
+  animation: portalIn 0.8s ease forwards;
+
 }
 
-.cont-info-ch:hover{
-    background-color: rgba(5, 5, 5, 0.934);
-    font-family: Oswald;
+.cont-info-ch:hover {
+  box-shadow: 0 0 20px #00ffccaa;
 }
+.cont-info-ch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../public/portal.gif');
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+  background-blend-mode: darken;
+}
+
+.cont-info-ch:hover::before {
+  opacity: 1;
+}
+
+.cont-info-ch > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cont-info-ch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
 
 .cont-info-for{
     width: 100%;
@@ -86,9 +130,11 @@ input:autofill{
 }
 
 .title-ch{
-    font-size: 30px;
+    font-size: 22px;
     color: aqua;
     -webkit-text-stroke: 1px #fff700;
+    /* font-family: 'Get Schwifty', 'Oswald', sans-serif; */
+    font-family: "Press Start 2P", system-ui;
 }
 .strong{
     color: #6fd3d0;
@@ -109,18 +155,51 @@ input:autofill{
 
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
+    bottom: 25px;
+    right: 30px;
+    background: radial-gradient(circle, #07a3a5 0%, #003535 100%);
+    border: 2px solid #b3ff00;
     border: none;
-    transition: opacity 0.3s;
+    color: white;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 28px;
+    box-shadow: 0 0 12px #b3ff00cc, inset 0 0 10px #00ffc355;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: flotar 2s infinite ease-in-out;
   }
-  
+
   .scroll-to-top:hover {
     opacity: 0.8;
+    transform: scale(1.1) rotate(-5deg);
+    background: radial-gradient(circle, #00f0b8 0%, #006363 100%);
+    box-shadow: 0 0 15px #b0f000, 0 0 30px #00ecb5;
   }
+
+  /* KEYFRAMES */
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes portalIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+/* KEYFRAMES */
 
   @media (max-width: 768px) {
     .contenido-home{
@@ -154,7 +233,7 @@ input:autofill{
         width: 350px;
         height: auto;
     }
-    
+
     .title-ch {
         font-size: 20px; /* Tamaño reducido para pantallas más pequeñas */
     }
@@ -171,6 +250,7 @@ input:autofill{
         font-family: Oswald;
         transition: all ease 0.5s;
     }
+
     .cont-info-for{
         width: 100%;
         height: 100%;
@@ -198,6 +278,18 @@ input:autofill{
     }
 
     #default-search {
-        width: 90%; /* Ocupar la mayor parte del ancho en móviles */
+        width: 90%;
     }
+}
+
+
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  pointer-events: none;
 }

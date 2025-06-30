@@ -1,110 +1,66 @@
 <app-nav-bar></app-nav-bar>
+<canvas id="starfield"></canvas>
 
-<section class="cont-gen-episodes">
-  <div class="cont-general">
-    <div class="cont-rick">
-      <p id="simpleUsage" class="oyeRick">
-        Hic… ¡Oye, oye, Morty! burp Escucha esto… estos son los mejores episodios de Rick y Morty, ¡los mejores! Así que si no los has visto… ¿qué estás esperando, un maldito boleto de invitación? ¡Míralos ya, Morty! ¡Vamos!
-      </p>
-      <img
-        class="rick"
-        src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-        alt="Rick Sanchez"
-      />
-    </div>
-
-    <div class="cont-bc">
-      <div class="cont-episodes">
-        <div class="cont-blur">
-          <div class="cont-title">
-            <p class="adult">serie by [Adult Swim]</p>
-            <h1>Los 5 mejores capítulos de 'Rick y Morty', de peor a mejor</h1>
-            <h4>
-              Pickle Rick, los meeseeks, la boda de Hombre pájaro... Estos son los
-              capítulos más inolvidables de 'Rick y Morty'.
-            </h4>
-          </div>
-
-          <div class="cont-texto">
-            <div class="cont-video">
-              <video
-                class="video"
-                src="rym-video.mp4"
-                controls
-              ></video>
-            </div>
-
-            <div class="foto-fondo-p">
-              <p class="contexto">
-                Rick y Morty es una serie de televisión animada estadounidense que
-                se estrenó el 2 de diciembre de 2013, en Adult Swim.
-                <br />
-                Hasta la fecha, ha conquistado millones de fans por su mezcla de
-                humor, ciencia ficción y drama.
-              </p>
-              <p class="contexto">
-                La serie combina chistes, acción y reflexiones profundas en episodios
-                de 20 minutos. Una joya moderna de la animación para adultos.
-              </p>
-              <p class="contexto">
-                A partir del 3 de mayo de 2020, se han emitido 41 episodios de Rick y Morty.
-                En mayo de 2018, se anunció que la serie se renovó por 70 episodios más por una cantidad no especificada de temporadas.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cont-portada">
-          <img
-            class="imgPortada"
-            src="Rick_and_Morty-logo.png"
-            alt="Logo Rick y Morty"
-          />
-        </div>
-      </div>
-
-      <div class="list">
-        <div class="cont-lista-eps">
-          <div *ngFor="let ep of episodes" class="ep" (click)="openModal(ep)">
-            <div class="cont-w-p">
-              <img class="imagen-list" [src]="ep.image" [alt]="ep.title" />
-            </div>
-            <div class="cont-parr">
-              <div class="titles">
-                <h2>{{ ep.rank }} -</h2>
-                <h3>{{ ep.title }} (S{{ ep.season }}x{{ ep.episode }})</h3>
-              </div>
-              <p class="parrafo">{{ ep.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button
-      *ngIf="isScrolled"
-      class="scroll-to-top"
-      (click)="scrollToTop()"
-      title="Subir al inicio"
-    >
-      ⬆️
-    </button>
+<section class="rym-section">
+  <div class="rym-hero">
+    <p id="simpleUsage" class="rym-intro">
+      Hic… ¡Oye, Morty! burp Estos episodios son oro interdimensional, ¡miralos ya!
+    </p>
+    <img
+    class="rym-avatar"
+    src="rick_cayendo.gif"
+    alt="Rick Sanchez"
+    />
   </div>
+
+  <div class="rym-content">
+    <div class="rym-header">
+      <p class="rym-tagline">Serie original de [Adult Swim]</p>
+      <h1>Top 5 episodios de Rick & Morty</h1>
+      <h4>Desde Pickle Rick hasta los Meeseeks... lo mejor de lo mejor</h4>
+    </div>
+
+    <div class="rym-description">
+      <p>
+        Rick y Morty combina ciencia ficción, humor ácido y aventuras bizarras. Esta serie animada ha
+        redefinido el género con su narrativa caótica y personajes memorables.
+      </p>
+    </div>
+
+    <div class="rym-episode-list">
+      <div class="rym-episode-card" *ngFor="let ep of episodes" (click)="openModal(ep)">
+        <img [src]="ep.image" [alt]="ep.title" class="rym-ep-img" />
+        <div class="rym-ep-info">
+          <h2>{{ ep.rank }} - {{ ep.title }}</h2>
+          <h3>S{{ ep.season }}x{{ ep.episode }}</h3>
+          <p>{{ ep.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="rym-scroll-top"
+    *ngIf="isScrolled"
+    (click)="scrollToTop()"
+    title="Back to top"
+  >
+    <img src="icon-arriba.png" alt="">
+  </button>
 </section>
 
-<!-- Modal -->
-<div
-  class="modal-background"
-  *ngIf="showModal"
-  (click)="closeModal()"
->
-  <div
-    class="modal-content"
-    (click)="$event.stopPropagation()"
-  >
-    <button class="close-button" (click)="closeModal()">×</button>
-    <h2>{{ selectedEpisode?.title }} (S{{ selectedEpisode?.season }}x{{ selectedEpisode?.episode }})</h2>
-    <img [src]="selectedEpisode?.image" [alt]="selectedEpisode?.title" />
+
+
+<div class="rym-modal-bg" *ngIf="showModal" (click)="closeModal()">
+  <div class="rym-modal-content" (click)="$event.stopPropagation()">
+    <button class="rym-close" (click)="closeModal()">×</button>
+
+    <div class="rym-modal-img-wrapper">
+      <div class="rym-modal-aura"></div> <!-- AURA -->
+      <img [src]="selectedEpisode?.image" [alt]="selectedEpisode?.title" />
+    </div>
+
+    <h2>{{ selectedEpisode?.title }}</h2>
     <p>{{ selectedEpisode?.details }}</p>
   </div>
 </div>

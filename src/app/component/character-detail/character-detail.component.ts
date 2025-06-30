@@ -1,4 +1,4 @@
-import { Component, Inject, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { ActivatedRoute } from '@angular/router';
 import { ApiServiceService } from '../../services/api-service.service';
@@ -8,7 +8,8 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-character-detail',
   templateUrl: './character-detail.component.html',
-  styleUrl: './character-detail.component.css'
+  styleUrl: './character-detail.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class CharacterDetailComponent implements OnInit {
 

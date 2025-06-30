@@ -1,32 +1,51 @@
-.footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #242424;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    position: relative;
-    bottom: 0;
-    height: 90px;
-    justify-content: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .footer-nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .footer-nav a:hover {
-    text-decoration: underline;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.footer-rm {
+  background: #0c0c0c;
+  padding: 40px 20px;
+  color: #00ffc3;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  box-shadow: inset 0 0 20px #00ffc3;
+  border-top: 2px solid #00ffc3;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-rm p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-shadow: 0 0 5px #00ffc3;
+}
+
+.footer-rm .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-rm a {
+  color: #00ffc3;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+  position: relative;
+}
+
+.footer-rm a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: #00ffc3;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer-rm a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
